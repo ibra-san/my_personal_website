@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="build.css">
+
+    <!--Google Fonts-->
+    <!--GOOGLE FONTS LINK STARTS BELOW-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Cabin:wght@400;500;600;700&family=Fira+Sans:wght@100;200;400;600&family=IBM+Plex+Sans:wght@200;400&family=Imperial+Script&family=Inconsolata:wght@200;300;400&family=Lato:wght@100;300;400;700;900&family=Libre+Barcode+128+Text&family=Libre+Barcode+39+Text&family=Libre+Baskerville:wght@400;700&family=Merriweather:wght@300;400;700;900&family=Montserrat+Alternates:wght@100;300;400;500;700;900&family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Mukta:wght@300;400;700&family=Nunito+Sans:wght@200;300;400&family=Nunito:wght@200;400;500;700&family=Open+Sans:wght@300;400;500;600;700;800&family=Oxygen&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&family=Poppins:ital,wght@0,200;0,400;0,500;0,600;0,700;0,900;1,400&family=Roboto:wght@100;300;400;500;700;900&family=Rubik:wght@400;500&family=Source+Sans+Pro:wght@300;400;600;900&family=Teko:wght@400;600;700&family=Titillium+Web:wght@200;300;400;600;700&family=Ubuntu:wght@300;400;700&family=Work+Sans:wght@100;200;300;400;500&display=swap"
+        rel="stylesheet">
+
+    <!--GOOGLE FONTS LINK ENDS ABOVE-->
+
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+        integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!--FONT AWESOME LINE ENDS ABOVE-->
+
+    <!-- Favicon LINK STARTS BELOW-->
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <!--FAVICON LINK ENDS ABOVE-->
+
+
+    <title>IM-SAN:TODO</title>
+</head>
+<body class=" font-fira bg-gray-200 w-full ">
+    <!-- Menu to add lists and create a new list-->
+    <div id="menu-container" class="absolute h-auto w-2/3 sm:w-1/2  lg:w-5/12 bg-gray-700 backdrop-blur-sm bg-opacity-40 rounded-md shadow-xl z-10 flex flex-col -translate-x-full">
+        <!-- Back arrow for menu / exit arrow -translate-x-full-->
+        <div id="menu-exit-container" class="flex flex-row-reverse justify content-between p-1 ">
+            <i id="menu-exit-button"
+                class=" w-[2.1rem] text-center p-2 top-2 shadow-md rounded-full bg-black text-white hover:cursor-pointer transition-all duration-300 ease-out hover:bg-gray-200 hover:text-black hover:shadow-sm fas fa-arrow-left">
+            </i>
+        </div>
+        
+        <!--Create a new List box-->
+            <!--input space / add new List button-->
+            <form data-new-list-form id="list-input-form" class=" border-spacing ml-2 mt-24 mb-10 w-11/12 sm:w-5/6 md:w-[57%]">
+                <label id="list-input-form-label" for="list-input-form" class="hidden">List Input Form</label>
+                <input 
+                    id="list-input-form-input"
+                    class="bordert-0 bg-transparent placeholder-gray-300 border-b-2 border-black font-extralight focus:outline-none focus:border-b-8 transition-all duration-300 ease-in-out w-[75%]"
+                    type="text"
+                    placeholder="Enter List Name"
+                    data-new-list-input
+                    required
+                    autofocus
+                >
+                <button 
+                    id="list-input-form-submit-button"
+                    class=" w-[2.1rem] hover:text-blue-700 text-center font-extrabold ml-1 rounded-full p-1 "
+                    type="submit"
+                    ><i class="fas fa-plus"></i></button>
+            </form>
+
+            <!-- created lists / remove list(s) button-->
+            <div id="created-list-container" class="w-full flex flex-col justify-around items-center">
+                    <ul data-lists class="w-full p-2">
+                    </ul>
+            </div>
+    </div>
+
+    <!--Open Menu Botton-->
+    <i id="menu-open-button" class=" hover:text-gray-500 hover:cursor-pointer rounded-full shadow-2xl left-4 top-2 p-1  fas fa-bars z-0 "></i>
+
+    <!--Default Home Screen-->
+    <section id="main-content" class="w-full relative flex flex-col items-center justify-center" data-no-lists-message-container >
+        <div id="welcome-message-remove" class="w-1/2 mt-[10rem] flex flex-col justify-center items-center flex-wrap">
+            <div id="main-text" class="text-2xl lg:text-4xl text-gray-500 flex flex-col items-center text-center">Welcome! You haven't created a list. Please create a list by clicking the button below</div>
+            <i id="open-menu-plus" class="mt-6 rounded-full bg-white p-1 hover:cursor-pointer hover:text-white hover:bg-black shadow-xl animate-bounce  text-xl fas fa-plus" data-open-menu-button-2></i>
+        </div>
+    </section>
+
+    <section id="list-items" class=" absolute  top-0 mb-5 w-full flex flex-col justify-center items-center" data-list-display-container>
+        <div id="items-main-container"
+            class="flex flex-col items-center mb-2 bg-white shadow-2xl w-11/12 lg:w-6/12 rounded-md absolute top-40 border"
+            >
+            <h1 id="items-list-title" class=" bg-black text-white w-full text-center text-lg p-4 font-extrabold rounded-md" data-list-title>
+            </h1>
+
+            <form type="submit" id="items-input-container" class="w-full flex flex-row justify-center items-center" data-new-task-form>
+                <input type="input" placeholder="Enter Items ...." class="outline-none border-b-2  w-8/12  mb-4 mt-4 focus:border-b-2 focus:border-gray-500 transition-all duration-300 ease-in-out" data-new-task-input >
+                <button type="submit" class="text-gray-200 text-lg hover:text-blue-600 transition-all duration-200 ease-in-out ">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </form>
+    
+    
+            <div id="list-items-content" class=" relative flex flex-col bg-white justify-center  w-full pl-2 p-4 rounded-md" data-tasks>
+            </div>
+    
+            <div id="buttons-container" class="flex flex-row justify-around w-full p-1 mt-2">
+                <button id="clear-list" type="button" class="mr-1 sm:mr-0 mb-3 shadow-2xl p-2 bg-yellow-300 rounded-md hover:animate-pulse" data-delete-complete-task-button>
+                    Clear List</button>
+                <p class="mb-3 mr-1 sm:mr-0 shadow-2xl p-2 bg-purple-300 rounded-md" data-list-count></p>
+                <button id="delete-list" type="button" class="mb-3 shadow-2xl p-2 bg-red-400 rounded-md hover:animate-pulse mr-1 sm:mr-0" data-delete-list-button>
+                    Delete List</button>
+            </div>
+    
+        </div>
+    </section>
+
+
+    
+        <template id="task-template">
+            <div class="mb-3 flex flex-row items-center rounded-md border-b-2">
+                <input type="checkbox"
+                    class=" appearance-none peer p-4 z-10 w-full flex flex-row items-center rounded-md hover:cursor-pointer">
+                <p
+                    class="absolute  peer-hover:w-full transition-all duration-300 ease-in-out ml-1 rounded-md ">
+                </p>
+            </div>
+        </template>
+
+
+    <!--jAVASCRIPT lINK BELOW-->
+    <script src="./main.js"></script>
+</body>
+</html>

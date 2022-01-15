@@ -20,16 +20,15 @@
 
         <!-- Favicon-->
        <link rel="shortcut icon" href="./resources/favicon.png  " type="image/x-icon">
-       <link rel="stylesheet" href="build2.css">
+       
+       <link rel="stylesheet" href="">
 
     <title>IM san</title>
 </head>
 <!--Issues to fix later
-    1) Logo error spelling: Front End (Web) Developer 
-    2) Change the illustration to the quill logo, its better. 
-    3) Check the spelling of the entire text
+    1) Check the spelling of the entire text
 -->
-<body class="font-poppins w-full bg-gradient-to-r from-[#ecf2fd] to-[#cfdef3]">
+<body class="font-fira w-full bg-gradient-to-r from-[#ecf2fd] to-[#cfdef3]">
     <main class="w-full flex flex-col justify-center items-center ">
         <!--Introduction Content below-->
         <section class="introduction-section w-full flex flex-col justify-center items-center h-screen">
@@ -84,6 +83,22 @@
                 </div>
                 <div class="cards text-xs font-bold sm:text-sm sm:font-regular m-1 p-2 pl-6 pr-6 rounded-md bg-gradient-to-br from-green-500 to-green-200 shadow-lg shadow-green-500/50 ">
                     Python (light)
+                </div> 
+                <div
+                    class="cards text-xs font-bold sm:text-sm sm:font-regular m-1 p-2 pl-6 pr-6 rounded-md bg-gradient-to-br from-fuchsia-400 to-blue-200 shadow-lg shadow-fuchsia-500/50">
+                    SQL
+                </div>
+                <div
+                    class="cards text-xs font-bold sm:text-sm sm:font-regular m-1 p-2 pl-6 pr-6 rounded-md bg-gradient-to-br from-slate-500 to-stone-200 shadow-lg shadow-stone-500/50 ">
+                    MySQL
+                </div>
+                <div
+                    class="cards text-xs font-bold sm:text-sm sm:font-regular m-1 p-2 pl-6 pr-6 rounded-md bg-gradient-to-br from-orange-500 to-purple-200 shadow-lg shadow-orange-500/50 ">
+                    Git
+                </div>
+                <div
+                    class="cards text-xs font-bold sm:text-sm sm:font-regular m-1 p-2 pl-6 pr-6 rounded-md bg-gradient-to-br from-blue-300 to-blue-900 shadow-lg shadow-blue-500/50 ">
+                    GitHub
                 </div>
                 <div class="cards text-xs font-bold sm:text-sm sm:font-regular m-1 p-2 pl-6 pr-6 rounded-md bg-gradient-to-br from-pink-500 to-pink-200 shadow-lg shadow-pink-500/50">
                     Figma
@@ -99,51 +114,19 @@
         <section id="Projects" class="w-full flex flex-col items-center h-screen justify-center ">
             <h1 class="text-2xl sm:text-4xl font-bold mb-8">My Projects</h1>
 
-            <div id="projects-container" class="w-full sm:w-10/12 flex flex-col items-center justify-between sm:flex sm:flex-row sm:justify-around flex-wrap">
-                <a href="" class=" w-10/12 sm:w-5/12 mb-6 hover:shadow-gray-500 shadow-lg hover:shadow-2xl ease-in-out duration-300" >
+            <div id="projects-container" class="w-full sm:w-10/12 flex flex-col items-center justify-between md:flex md:flex-row sm:justify-around flex-wrap">
+                <a href="./ToDolist-2/index.html" class=" w-10/12 md:w-5/12 mb-6 hover:shadow-gray-500 shadow-lg hover:shadow-2xl ease-in-out duration-300" >
                     <div class="project-cards flex flex-row justify-center items-center p-2 bg-white rounded-lg ">
-                        <i class="fas fa-circle text-red-500 text-4xl mr-6 w-2/12 text-center"></i>
+                        <img src="./resources/ToDoList.svg" alt="To Do List Logo" class="w-2/12 mr-8" style="width: 16%;">
                         <div id="project-information" class="w-10/12 flex flex-col flex-wrap">
-                            <p class="font-bold text-black text-xl mb-2">Demo Project 1</p>
-                            <p class="font-regular text-gray-600">This is a demo project, just to setup the website. Thanks</p>
+                            <p class="font-bold text-black text-xl mb-2">IM-san To Do List</p>
+                            <p class="font-regular text-gray-600">Technologies used: <strong>HTML, TailWindCSS and JavaScript</strong> </p>
+                            
                         </div>
                     
                     </div>
                 </a>
-                
-                <a href="" class="w-10/12 sm:w-5/12 mb-6 hover:shadow-gray-500 shadow-lg hover:shadow-2xl ease-in-out duration-300">
-                    <div class="project-cards flex flex-row justify-center items-center p-2 bg-white rounded-lg">
-                        <i class="fas fa-circle text-blue-500 text-4xl mr-6 w-2/12 text-center"></i>
-                        <div id="project-information" class="w-10/12 flex flex-col flex-wrap">
-                            <p class="font-bold text-black text-xl mb-2">Demo Project 2</p>
-                            <p class="font-regular text-gray-600">This is a demo project, just to setup the website. Thanks</p>
-                        </div>
-                    
-                    </div>
-                </a>
-                
-                <a href="" class="w-10/12 sm:w-5/12 mb-6 hover:shadow-gray-500 shadow-lg hover:shadow-2xl ease-in-out duration-300">
-                    <div class="project-cards flex flex-row justify-center items-center p-2 bg-white rounded-lg ">
-                        <i class="fas fa-circle text-green-500 text-4xl mr-6 w-2/12 text-center"></i>
-                        <div id="project-information" class="w-10/12 flex flex-col flex-wrap">
-                            <p class="font-bold text-black text-xl mb-2">Demo Project 3</p>
-                            <p class="font-regular text-gray-600">This is a demo project, just to setup the website. Thanks</p>
-                        </div>
-                    
-                    </div>
-                </a>
-                
-                <a href="#" target="_blank" class="w-10/12 sm:w-5/12 mb-6 hover:shadow-graygray-500 shadow-lg hover:shadow-2xl ease-in-out duration-300">
-                    <div class="project-cards flex flex-row justify-center items-center p-2 bg-white rounded-lg ">
-                        <i class="fas fa-circle text-purple-500 text-4xl mr-6 w-2/12 text-center"></i>
-                        <div id="project-information" class="w-10/12 flex flex-col flex-wrap">
-                            <p class="font-bold text-black text-xl mb-2">Demo Project 4</p>
-                            <p class="font-regular text-gray-600">This is a demo project, just to setup the website. Thanks</p>
-                        </div>
-                    
-                    </div>
-                </a>
-                
+
             </div>
         </section>
 
