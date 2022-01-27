@@ -6,6 +6,6 @@ https://www.ibrasan.rf.gd/?i=1
 
 
 ## Technologies used: 
-> HTML 
-> TailWindCSS
+* HTML 
+* TailWindCSS
   
