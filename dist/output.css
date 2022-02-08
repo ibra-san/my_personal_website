@@ -977,6 +977,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-gradient-to: #e5e7eb;
 }
 
+.to-blue-700 {
+  --tw-gradient-to: #1d4ed8;
+}
+
+.to-blue-500 {
+  --tw-gradient-to: #3b82f6;
+}
+
+.to-blue-100 {
+  --tw-gradient-to: #dbeafe;
+}
+
 .bg-clip-text {
   -webkit-background-clip: text;
           background-clip: text;
@@ -1442,6 +1454,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .md\:flex-row {
     flex-direction: row;
+  }
+
+  .md\:flex-row-reverse {
+    flex-direction: row-reverse;
   }
 }
 
